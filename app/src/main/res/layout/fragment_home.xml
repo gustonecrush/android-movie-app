@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:paddingBottom="100sp"
+    tools:context=".Menu.Home">
+
+    <!-- Header Section -->
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="25sp"
+        >
+
+        <!-- Button Sidebar Menu -->
+        <ImageView
+            android:id="@+id/btn_sidebar"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_sidebar"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            />
+
+        <!-- Profile Picture -->
+        <com.google.android.material.imageview.ShapeableImageView
+            app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+            android:id="@+id/profile_pict"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/user"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/content_section"
+        android:layout_below="@id/rl_header"
+        android:layout_width="match_parent"
+        android:scrollbars="vertical"
+        android:scrollIndicators="none"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Coming Soon Section -->
+            <LinearLayout
+                android:id="@+id/ll_coming_soon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <!-- Heading Coming Soon -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Coming Soon"
+                        android:textColor="@color/mov_black"
+                        android:textSize="20dp"
+                        android:paddingHorizontal="25sp"
+                        />
+
+                    <TextView
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/btn_see_more_coming_soon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="See More"
+                        android:textColor="@color/mov_yellow"
+                        android:textSize="15dp"
+                        android:paddingHorizontal="25sp"
+                        />
+
+                </RelativeLayout>
+
+                <!-- Movies Coming Soon -->
+                <fragment
+                    android:name="com.example.movieapp.Fragments.ComingSoonFragment"
+                    android:id="@+id/fr_coming_soon"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <!-- Top Movies Section -->
+            <LinearLayout
+                android:id="@+id/ll_top_movies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/ll_coming_soon"
+                android:layout_marginTop="25sp"
+                >
+
+                <!-- Heading Top Movie -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Top Movies"
+                        android:textColor="@color/mov_black"
+                        android:textSize="20dp"
+                        android:paddingHorizontal="25sp"
+                        />
+
+                    <TextView
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="See More"
+                        android:textColor="@color/mov_yellow"
+                        android:textSize="15dp"
+                        android:paddingHorizontal="25sp"
+                        />
+
+                </RelativeLayout>
+
+                <!-- Movies Top Movie -->
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:paddingRight="25sp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <!-- Movie Container -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="25sp"
+                            android:layout_marginTop="10sp"
+                            >
+                            <!-- Movie Poster Backdrop -->
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="150sp"
+                                android:layout_height="250sp"
+                                android:src="@drawable/tm_movie_1"
+                                app:shapeAppearanceOverlay="@style/roundedPosterCard" />
+
+                            <!-- Movie Title -->
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:text="Free Guy"
+                                android:textColor="@color/mov_black"
+                                android:textSize="20dp"
+                                android:layout_marginTop="10sp"
+                                />
+
+                            <!-- Category Title -->
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="Comedy"
+                                android:textColor="@color/mov_gray"
+                                android:textSize="15dp"
+                                android:layout_marginTop="-5sp"
+                                />
+
+                        </LinearLayout>
+
+                        <!-- Movie Container -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="25sp"
+                            android:layout_marginTop="10sp"
+                            >
+
+                            <!-- Movie Poster Backdrop -->
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="150sp"
+                                android:layout_height="250sp"
+                                android:src="@drawable/tm_movie_2"
+                                app:shapeAppearanceOverlay="@style/roundedPosterCard" />
+
+                            <!-- Movie Title -->
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:text="The Dark Knight"
+                                android:textColor="@color/mov_black"
+                                android:textSize="20dp"
+                                android:layout_marginTop="10sp"
+                                />
+
+                            <!-- Category Title -->
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="Action"
+                                android:textColor="@color/mov_gray"
+                                android:textSize="15dp"
+                                android:layout_marginTop="-5sp"
+                                />
+
+                        </LinearLayout>
+
+                        <!-- Movie Container -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="25sp"
+                            android:layout_marginTop="10sp"
+                            >
+
+                            <!-- Movie Poster Backdrop -->
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="150sp"
+                                android:layout_height="250sp"
+                                android:src="@drawable/tm_movie_3"
+                                app:shapeAppearanceOverlay="@style/roundedPosterCard" />
+
+                            <!-- Movie Title -->
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:text="Guns Akimbo"
+                                android:textColor="@color/mov_black"
+                                android:textSize="20dp"
+                                android:layout_marginTop="10sp"
+                                />
+
+                            <!-- Category Title -->
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="Comedy"
+                                android:textColor="@color/mov_gray"
+                                android:textSize="15dp"
+                                android:layout_marginTop="-5sp"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
