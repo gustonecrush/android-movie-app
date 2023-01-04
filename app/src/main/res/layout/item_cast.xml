@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:background="@drawable/border_cast"
+    android:padding="15sp"
+    android:layout_marginRight="15sp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="55sp"
+            android:layout_height="55sp"
+            android:src="@drawable/profile"
+            android:scaleType="centerCrop"
+            />
+
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20sp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/mov_black"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Henry Cavill"
+                />
+
+            <TextView
+                android:id="@+id/tv_character"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/mov_gray"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Geralt"
+                android:layout_marginTop="-5sp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -128,7 +128,9 @@
                         android:paddingHorizontal="25sp"
                         />
 
+
                     <TextView
+                        android:id="@+id/btn_see_more_top_movie"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_width="wrap_content"
@@ -143,141 +145,12 @@
                 </RelativeLayout>
 
                 <!-- Movies Top Movie -->
-                <HorizontalScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:scrollbars="none"
-                    android:paddingRight="25sp"
-                    >
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        >
-
-                        <!-- Movie Container -->
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:paddingLeft="25sp"
-                            android:layout_marginTop="10sp"
-                            >
-                            <!-- Movie Poster Backdrop -->
-                            <com.google.android.material.imageview.ShapeableImageView
-                                android:layout_width="150sp"
-                                android:layout_height="250sp"
-                                android:src="@drawable/tm_movie_1"
-                                app:shapeAppearanceOverlay="@style/roundedPosterCard" />
-
-                            <!-- Movie Title -->
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/poppins_semibold"
-                                android:text="Free Guy"
-                                android:textColor="@color/mov_black"
-                                android:textSize="20dp"
-                                android:layout_marginTop="10sp"
-                                />
-
-                            <!-- Category Title -->
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/poppins_medium"
-                                android:text="Comedy"
-                                android:textColor="@color/mov_gray"
-                                android:textSize="15dp"
-                                android:layout_marginTop="-5sp"
-                                />
-
-                        </LinearLayout>
-
-                        <!-- Movie Container -->
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:paddingLeft="25sp"
-                            android:layout_marginTop="10sp"
-                            >
-
-                            <!-- Movie Poster Backdrop -->
-                            <com.google.android.material.imageview.ShapeableImageView
-                                android:layout_width="150sp"
-                                android:layout_height="250sp"
-                                android:src="@drawable/tm_movie_2"
-                                app:shapeAppearanceOverlay="@style/roundedPosterCard" />
-
-                            <!-- Movie Title -->
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/poppins_semibold"
-                                android:text="The Dark Knight"
-                                android:textColor="@color/mov_black"
-                                android:textSize="20dp"
-                                android:layout_marginTop="10sp"
-                                />
-
-                            <!-- Category Title -->
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/poppins_medium"
-                                android:text="Action"
-                                android:textColor="@color/mov_gray"
-                                android:textSize="15dp"
-                                android:layout_marginTop="-5sp"
-                                />
-
-                        </LinearLayout>
-
-                        <!-- Movie Container -->
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:paddingLeft="25sp"
-                            android:layout_marginTop="10sp"
-                            >
-
-                            <!-- Movie Poster Backdrop -->
-                            <com.google.android.material.imageview.ShapeableImageView
-                                android:layout_width="150sp"
-                                android:layout_height="250sp"
-                                android:src="@drawable/tm_movie_3"
-                                app:shapeAppearanceOverlay="@style/roundedPosterCard" />
-
-                            <!-- Movie Title -->
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/poppins_semibold"
-                                android:text="Guns Akimbo"
-                                android:textColor="@color/mov_black"
-                                android:textSize="20dp"
-                                android:layout_marginTop="10sp"
-                                />
-
-                            <!-- Category Title -->
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/poppins_medium"
-                                android:text="Comedy"
-                                android:textColor="@color/mov_gray"
-                                android:textSize="15dp"
-                                android:layout_marginTop="-5sp"
-                                />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </HorizontalScrollView>
+                <fragment
+                    android:name="com.example.movieapp.Fragments.TopMoviesFragment"
+                    android:id="@+id/fr_top_movies"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
             </LinearLayout>
 

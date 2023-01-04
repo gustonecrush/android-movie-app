@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ComingSoonActivity">
+    tools:context=".Activity.ComingSoonActivity">
 
     <!-- Header Section -->
     <RelativeLayout
@@ -16,12 +16,25 @@
 
         <!-- Button Sidebar Menu -->
         <ImageView
-            android:id="@+id/btn_sidebar"
+            android:id="@+id/btn_back"
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:src="@drawable/ic_sidebar"
+            android:src="@drawable/ic_back_btn_black"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@+id/tv_category"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Coming Soon"
+            android:textColor="@color/mov_black"
+            android:textSize="20dp"
+            android:paddingHorizontal="25sp"
             />
 
         <!-- Profile Picture -->
@@ -41,7 +54,7 @@
         android:id="@+id/content_section"
         android:layout_below="@id/rl_header"
         android:layout_width="match_parent"
-        android:scrollbars="vertical"
+        android:scrollbars="none"
         android:scrollIndicators="none"
         android:layout_height="wrap_content">
 
@@ -57,20 +70,9 @@
                 android:orientation="vertical"
                 >
 
-                <!-- Heading Coming Soon -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:text="Coming Soon"
-                    android:textColor="@color/mov_black"
-                    android:textSize="25dp"
-                    android:paddingHorizontal="25sp"
-                    />
-
                 <!-- Movies Coming Soon -->
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rv_coming_soon_act"
+                    android:id="@+id/rv_list_movie"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     />

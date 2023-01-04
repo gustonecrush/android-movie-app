@@ -10,6 +10,13 @@
 
 <!-- Movie Poster Backdrop -->
     <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_poster"
+        android:layout_width="150sp"
+        android:layout_height="250sp"
+        android:src="@drawable/tm_movie_1"
+        app:shapeAppearanceOverlay="@style/roundedPosterCard" />
+
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/iv_backdrop"
         android:layout_width="350sp"
         android:layout_height="190sp"
