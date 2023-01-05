@@ -1,18 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:id="@+id/profile"
     tools:context=".Menu.Profile">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!-- Heading -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textSize="20sp"
-        android:textColor="@color/black"
-        android:text="Profile"
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hope you are \nfinding your movie!"
+        android:textSize="30sp"
+        android:textColor="@color/mov_black"
+        android:fontFamily="@font/poppins_medium"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100sp"
         />
 
-</FrameLayout>
+    <!-- Profile Picture -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profile_picture"
+        android:layout_width="200sp"
+        android:layout_height="200sp"
+        android:layout_below="@id/heading"
+        android:layout_marginTop="50sp"
+        android:src="@drawable/user"
+        android:theme="@style/roundedImageViewRounded"
+        android:layout_centerHorizontal="true"
+        />
+
+    <!-- Name -->
+    <LinearLayout
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_picture"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5sp"
+        android:padding="20sp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Farhan Augustiansyah"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/mov_black"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="User Application"
+            android:textSize="20sp"
+            android:fontFamily="@font/poppins_light"
+            android:textColor="@color/mov_gray"
+            android:textAlignment="center"
+            android:layout_marginTop="-5sp"
+            />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:background="@drawable/button"
+        android:backgroundTint="#FFB800"
+        android:text="Logout"
+        android:textColor="@color/white"
+        android:shadowColor="@color/mov_black"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:fontFamily="@font/poppins_medium"
+        android:paddingHorizontal="50sp"
+        android:paddingVertical="5sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30sp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Information Center"
+        android:textSize="20sp"
+        android:fontFamily="@font/poppins_light"
+        android:textColor="@color/mov_gray"
+        android:textAlignment="center"
+        android:layout_marginTop="-5sp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25sp"
+        />
+
+</RelativeLayout>

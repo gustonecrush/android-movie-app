@@ -75,6 +75,7 @@ class ComingSoonFragment : Fragment(), OnMovieClickListener {
         val intent = Intent(activity, DetailActivity::class.java)
         intent.putExtra("id", list[position]?.id)
         intent.putExtra("title", list[position]?.title)
+        intent.putExtra("overview", list[position]?.overview)
         intent.putExtra("poster", list[position]?.poster_path)
         intent.putExtra("rating", list[position]?.vote_average)
         startActivity(intent)

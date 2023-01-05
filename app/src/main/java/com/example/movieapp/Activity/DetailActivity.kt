@@ -30,10 +30,11 @@ class DetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detail)
 
         // getting intent data when item clicked in every section
-        val id     = intent.getIntExtra("id", 0)
-        val title  = intent.getStringExtra("title")
-        val poster = intent.getStringExtra("poster")
-        val rating = intent.getFloatExtra("rating", 0f)
+        val id       = intent.getIntExtra("id", 0)
+        val title    = intent.getStringExtra("title")
+        val overview = intent.getStringExtra("overview")
+        val poster   = intent.getStringExtra("poster")
+        val rating   = intent.getFloatExtra("rating", 0f)
         
         // setting rating in rating bar
         rating_bar.rating = rating / 2
@@ -43,6 +44,9 @@ class DetailActivity : AppCompatActivity() {
 
         // setting genre in text view
         tv_category.text = "Sci-Fiction"
+
+        // setting overview in text view
+        tv_overview.text = overview
 
         // setting poster in image view
         Picasso.with(this)

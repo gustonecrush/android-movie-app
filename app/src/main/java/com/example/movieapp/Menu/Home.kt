@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import com.example.movieapp.Activity.ComingSoonActivity
 import com.example.movieapp.R
 import com.example.movieapp.Activity.TopMovieActivity
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_home.*
 
 /**
@@ -26,6 +27,7 @@ class Home : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         btnSeeMoreComingSoonHandler()
         btnTopMovieHandler()
+//        btnProfilePictureHandler()
     }
 
     override fun onCreateView(
@@ -34,6 +36,12 @@ class Home : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false)
+    }
+
+    private fun btnProfilePictureHandler() {
+        profile_pict.setOnClickListener {
+            startActivity(Intent(context, Profile::class.java))
+        }
     }
 
     private fun btnSeeMoreComingSoonHandler() {

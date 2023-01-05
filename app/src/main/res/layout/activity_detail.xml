@@ -49,7 +49,7 @@
                     android:id="@+id/btn_back"
                     android:layout_width="50sp"
                     android:layout_height="50sp"
-                    android:layout_margin="30sp"
+                    android:layout_margin="25sp"
                     android:src="@drawable/ic_back_btn"
                     />
 
@@ -121,6 +121,41 @@
                 </LinearLayout>
 
             </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="10sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Overview"
+                    android:textColor="@color/mov_black"
+                    android:textSize="20dp"
+                    android:layout_marginTop="15sp"
+                    android:paddingHorizontal="25sp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground fight clubs forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion."
+                    android:textSize="15sp"
+                    android:textColor="@color/mov_black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:justificationMode="inter_word"
+                    android:paddingHorizontal="25sp"
+                    android:id="@+id/tv_overview"
+                    />
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_marginTop="10sp"
