@@ -6,6 +6,57 @@
     android:layout_height="match_parent"
     tools:context=".Activity.GettingStartedActivity">
 
+    <ImageView
+        android:layout_marginTop="150sp"
+        android:id="@+id/iv_banner"
+        android:layout_width="400sp"
+        android:layout_height="200sp"
+        android:src="@drawable/banner"
+        />
 
+    <TextView
+        android:id="@+id/heading"
+        android:layout_marginTop="50sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Watch Movies As \nYour Own Movie Collection"
+        android:textSize="25sp"
+        android:textColor="@color/mov_black"
+        android:fontFamily="@font/poppins_semibold"
+        android:textAlignment="center"
+        android:layout_below="@id/iv_banner"
+        />
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_marginTop="10sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Movie is gonna make us to keep what \nis enyouing life"
+        android:textSize="18sp"
+        android:layout_marginHorizontal="25sp"
+        android:textColor="@color/mov_gray"
+        android:fontFamily="@font/poppins_regular"
+        android:textAlignment="center"
+        android:layout_below="@id/heading"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40sp"
+        android:id="@+id/btn_getting_started"
+        android:padding="15sp"
+        android:layout_marginHorizontal="50sp"
+        android:backgroundTint="@color/mov_yellow"
+        android:background="@drawable/button"
+        android:text="Getting Started"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/desc"
+        android:textAllCaps="false"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        />
 
 </RelativeLayout>
